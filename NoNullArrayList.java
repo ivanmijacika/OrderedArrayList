@@ -9,4 +9,9 @@ public class NoNullArrayList<T> extends ArrayList<T>{
 	super(startingCapacity);
     }
 
+    public T set(int index, T element){
+	if (element == null) throw new IllegalArgumentException("Null is not a valid element");
+	else return super.set(index, element);
+    }
+
 }
