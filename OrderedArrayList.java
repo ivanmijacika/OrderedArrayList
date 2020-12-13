@@ -14,4 +14,13 @@ public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T
 	return i;
     }
 
+    public boolean add(T element){
+	super.add(find(element), element);
+	return true;
+    }
+
+    public void add(int index, T element){
+	super.add(find(element), element);
+    }
+
 }
