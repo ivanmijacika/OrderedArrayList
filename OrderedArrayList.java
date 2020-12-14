@@ -16,6 +16,7 @@ public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T
     }
 
     public T set(int index, T element){
+	if (element==null) throw new IllegalArgumentException("null is not a valid element");
 	T removed = get(index);
 	remove(index);
 	add(index, element);
